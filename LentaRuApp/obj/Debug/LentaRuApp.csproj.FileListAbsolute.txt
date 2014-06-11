@@ -29,3 +29,6 @@ C:\Users\Admin\Documents\GitHub\LentaRuApp\LentaRuApp\obj\Debug\LentaRuApp_Marku
 C:\Users\Admin\Documents\GitHub\LentaRuApp\LentaRuApp\obj\Debug\LentaRuApp.g.resources
 C:\Users\Admin\Documents\GitHub\LentaRuApp\LentaRuApp\obj\Debug\LentaRuApp.Properties.Resources.resources
 C:\Users\Admin\Documents\GitHub\LentaRuApp\LentaRuApp\obj\Debug\LentaRuApp.csproj.GenerateResource.Cache
+C:\Users\ww\Documents\GitHub\LentaRuApp\LentaRuApp\bin\Debug\LentaRuApp.exe.config
+C:\Users\ww\Documents\GitHub\LentaRuApp\LentaRuApp\obj\Debug\LentaRuApp.exe
+C:\Users\ww\Documents\GitHub\LentaRuApp\LentaRuApp\obj\Debug\LentaRuApp.pdb

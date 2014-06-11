@@ -9,37 +9,33 @@ using System.Threading.Tasks;
 
 namespace LentaRuApp
 {
-    class Item
+    class Article
     {
         public string Time { get; set; }
         public string Title { get; set; }
         public string Url { get; set; }
-    }
-
-    class Article : Item
-    {
         public string Image { get; set; }
         public string Title2 { get; set; }
     }
 
     class HtmlParser
     {
-        public async void LoadContent()
+        public async Task<List<Article>> LoadContent()
         {
             WebRequest request = WebRequest.Create(new Uri("http://lenta.ru"));
             WebResponse response = await request.GetResponseAsync();
             Stream data = response.GetResponseStream();
             HtmlDocument doc = new HtmlDocument();
             doc.Load(data, Encoding.UTF8);
-            LoadMainNews(doc);
+            return LoadMainNews(doc);
         }
         
-        private void LoadMainNews(HtmlDocument doc)
+        private List<Article> LoadMainNews(HtmlDocument doc)
         {
             IEnumerable<HtmlNode> items = doc.DocumentNode.Descendants("div").Where(x => x.GetAttributeValue("class", "").Equals("item"));
             IEnumerable<HtmlNode> articles = doc.DocumentNode.Descendants("div").Where(x => x.GetAttributeValue("class", "").Equals("article item"));
 
-            List<Item> itemsList = new List<Item>();
+            List<Article> itemsList = new List<Article>();
             List<Article> articlesList = new List<Article>();
             foreach(HtmlNode node in items)
             {
@@ -50,11 +46,13 @@ namespace LentaRuApp
             {
                 articlesList.Add(ParseArticle(node));
             }
+
+            return articlesList;
         }
 
-        private Item ParseItem(HtmlNode item)
+        private Article ParseItem(HtmlNode item)
         {
-            Item art = new Item();
+            Article art = new Article();
 
             if(item.ChildNodes.LongCount(x => x.Name == "time") > 0)
             {
