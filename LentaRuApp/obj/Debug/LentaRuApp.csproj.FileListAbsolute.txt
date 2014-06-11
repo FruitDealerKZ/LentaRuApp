@@ -14,3 +14,18 @@ c:\users\admin\documents\visual studio 2013\Projects\LentaRuApp\LentaRuApp\obj\D
 c:\users\admin\documents\visual studio 2013\Projects\LentaRuApp\LentaRuApp\obj\Debug\LentaRuApp.csproj.GenerateResource.Cache
 c:\users\admin\documents\visual studio 2013\Projects\LentaRuApp\LentaRuApp\obj\Debug\LentaRuApp.exe
 c:\users\admin\documents\visual studio 2013\Projects\LentaRuApp\LentaRuApp\obj\Debug\LentaRuApp.pdb
+C:\Users\Admin\Documents\GitHub\LentaRuApp\LentaRuApp\bin\Debug\LentaRuApp.exe.config
+C:\Users\Admin\Documents\GitHub\LentaRuApp\LentaRuApp\obj\Debug\LentaRuApp.exe
+C:\Users\Admin\Documents\GitHub\LentaRuApp\LentaRuApp\obj\Debug\LentaRuApp.pdb
+C:\Users\Admin\Documents\GitHub\LentaRuApp\LentaRuApp\bin\Debug\LentaRuApp.exe
+C:\Users\Admin\Documents\GitHub\LentaRuApp\LentaRuApp\bin\Debug\LentaRuApp.pdb
+C:\Users\Admin\Documents\GitHub\LentaRuApp\LentaRuApp\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\Admin\Documents\GitHub\LentaRuApp\LentaRuApp\bin\Debug\HtmlAgilityPack.xml
+C:\Users\Admin\Documents\GitHub\LentaRuApp\LentaRuApp\obj\Debug\LentaRuApp.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Documents\GitHub\LentaRuApp\LentaRuApp\obj\Debug\MainWindow.baml
+C:\Users\Admin\Documents\GitHub\LentaRuApp\LentaRuApp\obj\Debug\MainWindow.g.cs
+C:\Users\Admin\Documents\GitHub\LentaRuApp\LentaRuApp\obj\Debug\App.g.cs
+C:\Users\Admin\Documents\GitHub\LentaRuApp\LentaRuApp\obj\Debug\LentaRuApp_MarkupCompile.cache
+C:\Users\Admin\Documents\GitHub\LentaRuApp\LentaRuApp\obj\Debug\LentaRuApp.g.resources
+C:\Users\Admin\Documents\GitHub\LentaRuApp\LentaRuApp\obj\Debug\LentaRuApp.Properties.Resources.resources
+C:\Users\Admin\Documents\GitHub\LentaRuApp\LentaRuApp\obj\Debug\LentaRuApp.csproj.GenerateResource.Cache

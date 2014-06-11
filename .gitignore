@@ -1,3 +1,5 @@
 LentaRuApp/obj/Debug/LentaRuApp.csproj.FileListAbsolute.txt
 LentaRuApp/obj/Debug/LentaRuApp_MarkupCompile.i.cache
 LentaRuApp/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+*.cache
+*.exe

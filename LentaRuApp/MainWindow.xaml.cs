@@ -30,16 +30,10 @@ namespace LentaRuApp
             testURL();
         }
 
-        private async void testURL()
+        private void testURL()
         {
-            WebRequest request = WebRequest.Create(new Uri("http://lenta.ru"));
-            WebResponse response = await request.GetResponseAsync();
-            Stream data = response.GetResponseStream();
-
-            HtmlDocument doc = new HtmlDocument();
-            doc.Load(data);
-
-            Console.Write(doc.DocumentNode.InnerHtml);
+            HtmlParser parser = new HtmlParser();
+            parser.LoadContent();
         }
     }
 }
