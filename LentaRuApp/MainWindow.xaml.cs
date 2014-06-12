@@ -1,4 +1,5 @@
 ﻿using HtmlAgilityPack;
+using LentaApp;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -34,6 +35,8 @@ namespace LentaRuApp
         {
             HtmlParser parser = new HtmlParser();
             parser.LoadContent();
+            ContentParser cParser = new ContentParser();
+            cParser.OpenUrl("http://lenta.ru/articles/2014/06/12/brazilcroatia/");
         }
     }
 }

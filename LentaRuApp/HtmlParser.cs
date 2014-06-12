@@ -58,13 +58,13 @@ namespace LentaRuApp
             {
                 art.Time = item.Descendants("time").First().InnerText;
                 art.Title = Trim(item.Descendants("a").First().InnerText);
-                art.Url = item.Descendants("a").First().GetAttributeValue("href", "");
+                art.Url = "http://lenta.ru" + item.Descendants("a").First().GetAttributeValue("href", "");
             }
             else
             {
                 art.Time = item.Descendants("span").First(x => x.GetAttributeValue("class", "").Equals("time")).InnerText;
                 art.Title = Trim(item.Descendants("div").First(x => x.GetAttributeValue("class", "").Equals("titles")).InnerText);
-                art.Url = item.Descendants("a").First().GetAttributeValue("href", "");
+                art.Url = "http://lenta.ru" + item.Descendants("a").First().GetAttributeValue("href", "");
             }
 
             return art;
@@ -75,10 +75,11 @@ namespace LentaRuApp
             ArticleHeader art = new ArticleHeader();
 
             art.Time = Trim(node.Descendants("span").First(x => x.GetAttributeValue("class", "").Equals("time")).InnerText);
-            art.Image = node.Descendants("img").First().GetAttributeValue("src", "");
+            if(node.Descendants("img").Count() > 0)
+                art.Image = node.Descendants("img").First().GetAttributeValue("src", "");
             art.Title = Trim(node.Descendants("h3").First().InnerText);
             art.Title2 = Trim(node.Descendants("div").First(x => x.GetAttributeValue("class", "").Equals("rightcol")).InnerText);
-            art.Url = node.Descendants("h3").First().Descendants("a").First().GetAttributeValue("href", "");
+            art.Url = "http://lenta.ru" + node.Descendants("h3").First().Descendants("a").First().GetAttributeValue("href", "");
 
             return art;
         }
