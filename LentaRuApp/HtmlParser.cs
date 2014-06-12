@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace LentaRuApp
 {
-    class Article
+    class ArticleHeader
     {
         public string Time { get; set; }
         public string Title { get; set; }
@@ -20,7 +20,7 @@ namespace LentaRuApp
 
     class HtmlParser
     {
-        public async Task<List<Article>> LoadContent()
+        public async Task<List<ArticleHeader>> LoadContent()
         {
             WebRequest request = WebRequest.Create(new Uri("http://lenta.ru"));
             WebResponse response = await request.GetResponseAsync();
@@ -30,13 +30,13 @@ namespace LentaRuApp
             return LoadMainNews(doc);
         }
         
-        private List<Article> LoadMainNews(HtmlDocument doc)
+        private List<ArticleHeader> LoadMainNews(HtmlDocument doc)
         {
             IEnumerable<HtmlNode> items = doc.DocumentNode.Descendants("div").Where(x => x.GetAttributeValue("class", "").Equals("item"));
             IEnumerable<HtmlNode> articles = doc.DocumentNode.Descendants("div").Where(x => x.GetAttributeValue("class", "").Equals("article item"));
 
-            List<Article> itemsList = new List<Article>();
-            List<Article> articlesList = new List<Article>();
+            List<ArticleHeader> itemsList = new List<ArticleHeader>();
+            List<ArticleHeader> articlesList = new List<ArticleHeader>();
             foreach(HtmlNode node in items)
             {
                 itemsList.Add(ParseItem(node));
@@ -50,9 +50,9 @@ namespace LentaRuApp
             return articlesList;
         }
 
-        private Article ParseItem(HtmlNode item)
+        private ArticleHeader ParseItem(HtmlNode item)
         {
-            Article art = new Article();
+            ArticleHeader art = new ArticleHeader();
 
             if(item.ChildNodes.LongCount(x => x.Name == "time") > 0)
             {
@@ -70,9 +70,9 @@ namespace LentaRuApp
             return art;
         }
 
-        private Article ParseArticle(HtmlNode node)
+        private ArticleHeader ParseArticle(HtmlNode node)
         {
-            Article art = new Article();
+            ArticleHeader art = new ArticleHeader();
 
             art.Time = Trim(node.Descendants("span").First(x => x.GetAttributeValue("class", "").Equals("time")).InnerText);
             art.Image = node.Descendants("img").First().GetAttributeValue("src", "");
@@ -83,7 +83,7 @@ namespace LentaRuApp
             return art;
         }
 
-        private static string Trim(string input)
+        public static string Trim(string input)
         {
             return input.Trim(new char[] {'\n', ' '});
         }
